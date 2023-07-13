@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const morgan = require("morgan");
+const cors = require("cors");
 const routesHerramientas = require("./routes/herramientaRoutes");
 const routesEstudiante = require("./routes/estudianteRoutes");
 const routesSobreMi = require("./routes/sobreMiRoutes");
@@ -9,6 +10,7 @@ require("dotenv").config();
 
 app.use(express.json());
 app.use(morgan("dev"));
+app.use(cors());
 
 app.use("/", routesHerramientas);
 app.use("/", routesEstudiante);
