@@ -3,6 +3,6 @@ const router = express.Router();
 const blogControllers = require("../controllers/blogController");
 
 router.get("/mostrarInfoBlog/:idBlog", blogControllers.mostrarInfoBlog);
-router.put("/modificarInfoBlog", blogControllers.modificarInfoBlog);
+router.put("/modificarInfoBlog/:idBlog", blogControllers.modificarInfoBlog);
 
 module.exports = router;
